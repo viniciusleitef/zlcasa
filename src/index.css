@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* zlcasa - Artisanal Porcelain Design System
+   Elegant, organic, handcrafted aesthetic */
+
+
+@layer base {
+  :root {
+    /* Off-white Pearl Background - organic warmth */
+    --background: 40 33% 98%;
+    --foreground: 150 20% 15%;
+
+    /* Cards with subtle cream tint */
+    --card: 40 40% 99%;
+    --card-foreground: 150 20% 15%;
+
+    --popover: 40 40% 99%;
+    --popover-foreground: 150 20% 15%;
+
+    /* Forest Green/Petrol - Primary action color */
+    --primary: 153 40% 18%;
+    --primary-foreground: 40 33% 98%;
+
+    /* Champagne Gold - Accent for details */
+    --secondary: 43 45% 58%;
+    --secondary-foreground: 150 20% 15%;
+
+    /* Muted tones */
+    --muted: 40 20% 94%;
+    --muted-foreground: 150 10% 45%;
+
+    /* Gold accent */
+    --accent: 43 55% 62%;
+    --accent-foreground: 150 20% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 40 33% 98%;
+
+    --border: 40 20% 88%;
+    --input: 40 20% 88%;
+    --ring: 153 40% 18%;
+
+    --radius: 0.25rem;
+
+    /* Custom zlcasa tokens */
+    --gold: 43 55% 62%;
+    --gold-light: 43 45% 75%;
+    --petrol: 153 40% 18%;
+    --petrol-light: 153 30% 28%;
+    --cream: 40 33% 96%;
+    --cream-dark: 40 20% 90%;
+
+    --sidebar-background: 40 33% 98%;
+    --sidebar-foreground: 150 20% 15%;
+    --sidebar-primary: 153 40% 18%;
+    --sidebar-primary-foreground: 40 33% 98%;
+    --sidebar-accent: 43 55% 62%;
+    --sidebar-accent-foreground: 150 20% 15%;
+    --sidebar-border: 40 20% 88%;
+    --sidebar-ring: 153 40% 18%;
+  }
+
+  .dark {
+    --background: 150 20% 8%;
+    --foreground: 40 33% 98%;
+
+    --card: 150 20% 10%;
+    --card-foreground: 40 33% 98%;
+
+    --popover: 150 20% 10%;
+    --popover-foreground: 40 33% 98%;
+
+    --primary: 43 55% 62%;
+    --primary-foreground: 150 20% 8%;
+
+    --secondary: 153 30% 25%;
+    --secondary-foreground: 40 33% 98%;
+
+    --muted: 150 15% 18%;
+    --muted-foreground: 40 20% 70%;
+
+    --accent: 43 45% 58%;
+    --accent-foreground: 150 20% 8%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 40 33% 98%;
+
+    --border: 150 15% 20%;
+    --input: 150 15% 20%;
+    --ring: 43 55% 62%;
+
+    --sidebar-background: 150 20% 8%;
+    --sidebar-foreground: 40 33% 98%;
+    --sidebar-primary: 43 55% 62%;
+    --sidebar-primary-foreground: 150 20% 8%;
+    --sidebar-accent: 153 30% 25%;
+    --sidebar-accent-foreground: 40 33% 98%;
+    --sidebar-border: 150 15% 20%;
+    --sidebar-ring: 43 55% 62%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .text-gold {
+    color: hsl(var(--gold));
+  }
+
+  .bg-gold {
+    background-color: hsl(var(--gold));
+  }
+
+  .border-gold {
+    border-color: hsl(var(--gold));
+  }
+
+  .text-petrol {
+    color: hsl(var(--petrol));
+  }
+
+  .bg-petrol {
+    background-color: hsl(var(--petrol));
+  }
+
+  .bg-cream {
+    background-color: hsl(var(--cream));
+  }
+
+  /* Elegant gold divider */
+  .divider-gold {
+    @apply h-px bg-gradient-to-r from-transparent via-[hsl(var(--gold))] to-transparent;
+  }
+
+  /* Hover zoom effect for images */
+  .hover-zoom {
+    @apply overflow-hidden;
+  }
+
+  .hover-zoom img {
+    @apply transition-transform duration-700 ease-out;
+  }
+
+  .hover-zoom:hover img {
+    @apply scale-110;
+  }
+
+  /* Gold text gradient */
+  .text-gradient-gold {
+    @apply bg-gradient-to-r from-[hsl(43,55%,52%)] via-[hsl(43,60%,68%)] to-[hsl(43,55%,52%)] bg-clip-text text-transparent;
+  }
+
+  /* Elegant button styles */
+  .btn-primary {
+    @apply bg-petrol text-white px-8 py-3 font-sans text-sm tracking-widest uppercase transition-all duration-300 hover:bg-[hsl(var(--petrol-light))];
+  }
+
+  .btn-outline {
+    @apply border border-[hsl(var(--gold))] text-petrol px-8 py-3 font-sans text-sm tracking-widest uppercase transition-all duration-300 hover:bg-[hsl(var(--gold))] hover:text-white;
+  }
+
+  /* Section spacing */
+  .section-padding {
+    @apply py-20 md:py-32;
+  }
+
+  /* Container with elegant margins */
+  .container-elegant {
+    @apply max-w-7xl mx-auto px-6 md:px-12;
+  }
+}

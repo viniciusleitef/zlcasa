@@ -1,0 +1,22 @@
+import Layout from "@/components/layout/Layout";
+import HeroSection from "@/components/home/HeroSection";
+import EssenceSection from "@/components/home/EssenceSection";
+import CategoriesSection from "@/components/home/CategoriesSection";
+import DifferentialsSection from "@/components/home/DifferentialsSection";
+import InstagramSection from "@/components/home/InstagramSection";
+import CTASection from "@/components/home/CTASection";
+
+const Index = () => {
+  return (
+    <Layout>
+      <HeroSection />
+      <EssenceSection />
+      <CategoriesSection />
+      <DifferentialsSection />
+      <CTASection />
+      <InstagramSection />
+    </Layout>
+  );
+};
+
+export default Index;
