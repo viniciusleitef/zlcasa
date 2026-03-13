@@ -1,4 +1,5 @@
 import Layout from "@/components/layout/Layout";
+import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import artisanImg from "@/assets/artisan-painting.jpg";
 import heroImg from "@/assets/hero-porcelain.jpg";
@@ -35,6 +36,11 @@ const processSteps = [
 const Atelier = () => {
   return (
     <Layout>
+      <SEO 
+        title="O Ateliê | Nossa História e Processo"
+        description="Conheça a história da zlcasa e nosso processo de pintura artesanal em porcelana. Tradição europeia e cuidado em cada pincelada."
+        path="/atelie"
+      />
       {/* Hero */}
       <section className="relative py-32 bg-cream overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -99,6 +105,8 @@ const Atelier = () => {
                   src={artisanImg}
                   alt="Ateliê zlcasa"
                   className="w-full aspect-[4/5] object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div className="absolute -bottom-8 -left-8 w-48 h-48 bg-gold/10 rounded-full -z-10" />
@@ -161,6 +169,8 @@ const Atelier = () => {
                 src={artisanImg}
                 alt="Artesã trabalhando"
                 className="w-full h-full object-cover aspect-square md:aspect-auto"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div className="hover-zoom overflow-hidden shadow-lg">
@@ -168,6 +178,8 @@ const Atelier = () => {
                 src={heroImg}
                 alt="Peça finalizada"
                 className="w-full h-full object-cover aspect-square"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div className="hover-zoom overflow-hidden shadow-lg">
@@ -175,6 +187,8 @@ const Atelier = () => {
                 src={mesaImg}
                 alt="Coleção mesa posta"
                 className="w-full h-full object-cover aspect-square"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>

@@ -1,4 +1,5 @@
 import Layout from "@/components/layout/Layout";
+import SEO from "@/components/SEO";
 import { useState } from "react";
 import { toast } from "sonner";
 import { Check, Loader2 } from "lucide-react";
@@ -231,6 +232,11 @@ ${formData.message || "Sem detalhes adicionais."}
 
   return (
     <Layout>
+      <SEO 
+        title="Solicitar Orçamento | Peças sob Encomenda"
+        description="Solicite um orçamento para peças de porcelana personalizadas para seu evento. Batizados, casamentos e presentes corporativos exclusivos."
+        path="/orcamento"
+      />
       {/* Hero Section */}
       <section className="py-24 bg-cream">
         <div className="container-elegant text-center">

@@ -12,6 +12,8 @@ const EssenceSection = () => {
               src={artisanImage}
               alt="Artesã pintando porcelana"
               className="w-full aspect-[4/5] object-cover"
+              loading="lazy"
+              decoding="async"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-petrol/20 to-transparent" />
           </div>

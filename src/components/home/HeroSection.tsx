@@ -10,6 +10,7 @@ const HeroSection = () => {
           src={heroImage}
           alt="Porcelana artesanal zlcasa"
           className="w-full h-full object-cover"
+          fetchPriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/20 to-background/60" />
       </div>

@@ -1,4 +1,5 @@
 import Layout from "@/components/layout/Layout";
+import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import religiousImg from "@/assets/collection-religious.jpg";
 import mesaImg from "@/assets/collection-mesa.jpg";
@@ -57,6 +58,11 @@ const collections = [
 const Collections = () => {
   return (
     <Layout>
+      <SEO 
+        title="Nossas Coleções | Porcelana Pintada à Mão"
+        description="Explore nossa galeria de peças exclusivas em porcelana: Religiosas, Mesa Posta, Corporativas e Personalizadas. Arte e tradição em cada detalhe."
+        path="/colecoes"
+      />
       {/* Hero */}
       <section className="py-24 bg-cream">
         <div className="container-elegant text-center">
@@ -105,6 +111,8 @@ const Collections = () => {
                       src={item.image}
                       alt={item.title}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-petrol/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-6">
