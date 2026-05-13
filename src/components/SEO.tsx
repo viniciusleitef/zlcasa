@@ -32,7 +32,7 @@ const SEO = ({
     "image": ogImageUrl,
     "@id": siteUrl,
     "url": siteUrl,
-    "telephone": "+558396822393",
+    "telephone": "+5583998595225",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "João Pessoa",

@@ -17,7 +17,7 @@ const eventTypes = [
 ];
 
 // Substitua pelo seu número de WhatsApp (apenas números, com código do país)
-const WHATSAPP_NUMBER = "558396822393"; // Exemplo: 55 11 99999-9999
+const WHATSAPP_NUMBER = "5583998595225"; // Exemplo: 55 11 99999-9999
 
 const Budget = () => {
   const [formData, setFormData] = useState({
